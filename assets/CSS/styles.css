@@ -1,12 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 /* Reset basic styling for all elements */
+
+:root {
+    /*primary color*/
+    --main-bg-color:  rgba(49, 153, 238, 0.9);
+    /*buttons color*/
+    --orange-dark:rgba(255, 69, 0,1);
+
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     text-decoration: none;
 }
+
+
 /* Body styling for layout and typography */
 body{
     min-height: 100vh;
@@ -27,7 +38,7 @@ section{
 }
 /* Header background */
 header{
-    background-color: rgba(49, 153, 238, 0.9);
+    background-color: var(--main-bg-color);;
 }
 /* Navbar layout settings */
 
@@ -36,7 +47,7 @@ header{
     justify-content: space-between;
     align-items:center;
     padding:  10px 20px 5px 20px;
-    border-bottom: 1px solid orangered;
+    border-bottom: 1px solid var(--orange-dark);
 }
 
 /* Container for the navigation list */
@@ -45,7 +56,7 @@ header{
     text-align: right;
     position: relative;
     background-color: rgb(38, 111, 221);
-    border-bottom: 1px solid orangered;
+    border-bottom: 1px solid var(--orange-dark);
     padding-right: 20px;
 
 }
