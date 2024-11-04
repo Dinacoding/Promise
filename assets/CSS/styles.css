@@ -23,18 +23,18 @@ section{
 /* Logo image size */
 
 .logo img{
-    width: 130px;
+    width: 150px;
 }
 /* Header background */
 header{
-    background-color: rgba(19, 141, 241, 0.9);
+    background-color: rgba(240, 240, 240, 0.9);
 }
 /* Navbar layout settings */
 
 .navbar{
     display: flex;
     justify-content: space-between;
-    align-items:start;
+    align-items:center;
     padding:  10px 20px 5px 20px;
     border-bottom: 1px solid orangered;
 }
