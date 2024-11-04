@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+/* Reset basic styling for all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+/* Body styling for layout and typography */
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /*generic project styles*/
+    color: #3a3a3a;
+    font-family: 'Manrope', sans-serif;
+}
+
+section{
+    margin: 10px 0;
+}
+/* Logo image size */
+
+.logo img{
+    width: 130px;
+}
+/* Header background */
+header{
+    background-color: rgba(19, 141, 241, 0.9);
+}
+/* Navbar layout settings */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items:start;
+    padding:  10px 20px 5px 20px;
+    border-bottom: 1px solid orangered;
+}
+
+/* Container for the navigation list */
+
+.list{
+    text-align: right;
+    padding: 0 20px;
+    position: relative;
+    background-color: rgb(38, 111, 221);
+    border-bottom: 1px solid orangered;
+
+}
+
+/* Navigation container styling */
+
+nav{
+    position: absolute;
+    width: 100%;
+    padding:0.5rem 1rem;
+    right: 0;
+    box-shadow: 0 2px 2px #3a3a3a;
+    background-color: rgb(38, 111, 221);
+    display: none; /* Initially hidden, shown when toggled */
+}
+/* Show nav menu when toggler is checked */
+#nav-toggler:checked ~ nav{
+    display: block;
+    max-width: 100%;
+    border-bottom: 1px solid orangered;
+
+}
+
+#nav-toggler{
+    display: none;
+}
+
+/* Styling for the nav toggle label */
+
+
+.nav-toggler-label{
+    font-size: 2rem; /* Large icon size for easy tapping */
+    cursor: pointer;
+    text-align: right;
+    
+
+}
+/* Menu list styling */
+
+#menu {
+    letter-spacing: 3px; /* Adds spacing between letters */
+    font-size: 110%; /* /* Slightly larger font */
+    list-style-type: none;
+   
+}
+
+/* Show menu with a slide-down effect when toggler is checked */
+
+#nav-toggler:checked ~ #menu {
+    max-height: 500px; /* Set a max height to make it slide down */
+    display: block;
+    width: 100%;
+
+}
+
+/* Individual menu item styling */
+.active{
+    border-bottom: 1px solid orangered;
+    padding-bottom: 4px;
+}
+#menu > li{
+    margin-bottom: 1rem;
+}
+.hidden-menu{
+    display: none;
+}
+/* Link styling within menu items */
+
+#menu li a{
+    text-decoration: none;
+    color: aliceblue;
+    text-transform: capitalize;
+    font-family: "Manrope", sans-serif;
+    font-weight: bolder;
+    
+
+}
+
+/* Button styling */
+
+.btn {
+    background-color: rgb(255, 148, 8);
+    box-shadow: 2px 2px 3px black;
+    
+}
+.btn-nav{
+    padding: 8px;
+    font-size: 130%;
+}
+
+/* Button link styling */
+
+.btn-nav a, .btn-hero {
+    padding: 5px;
+    font-size: 130%;
+    text-transform: capitalize;
+    font-family: "Manrope", sans-serif;
+    font-weight: bolder;
+
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+}
+.hero-left{
+    background-color:  rgb(38, 111, 221);
+    width: 100%;
+    height:fit-content;
+    position: relative;
+    border: 1px solid rgb(240, 187, 15);
+    
+}
+.hero-right{
+    background: url(../images/hero-img.JPG) no-repeat center center/cover;
+    height: 90vh;
+    width: 100%;
+
+}
+.hero-text{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 20px 50px;
+    h1 , p {
+        font-family: 'Lato', sans-serif;
+        
+    }
+}
+#about-section{
+    display: flex;
+    align-items: center;
+
+}
+.about-box{
+    padding: 30px;
+
+}
+.about-box > h2 , .about-box > p{
+    color: orange;
+    font-size: 120%;
+
+}
+
+#slide-section{
+    display: flex;
+
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 30px;
+    position: relative;
+    background-color:  rgb(38, 111, 221);
+
+}
+
+/* Track para organizar os elementos em linha */
+.carousel-track {
+    display: flex;
+    gap: 10px; /* Espaço entre os cards */
+    transition: transform 0.5s ease-in-out;
+    width:100%;
+}
+
+/* Estilo dos cards */
+.slide {
+    min-width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.2em;
+    color: #333;
+    border: 1px solid white;
+    
+}
+
+.carousel-container input {
+    display: none;
+}
+
+/* Define a posição de cada slide com base no input selecionado */
+#slide1:checked ~ .carousel-track {
+    transform: translateX(0%);
+}
+
+#slide2:checked ~ .carousel-track {
+    transform: translateX(-100%);
+}
+
+#slide3:checked ~ .carousel-track {
+    transform: translateX(-203%);
+}
+
+
+
+/* Indicadores do carrossel (botões de navegação) */
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-45%);
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-indicators label {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-indicators label:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Indicador ativo */
+#slide1:checked ~ .carousel-indicators label[for="slide1"],
+#slide2:checked ~ .carousel-indicators label[for="slide2"],
+#slide3:checked ~ .carousel-indicators label[for="slide3"]
+{
+    background-color: #333;}
+
+.slide-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+}
+.slide-img{
+    background: url(../images/card-1.JPG) no-repeat top center/cover;
+    width: 100%;
+    height:100%;
+}
+.slide-img-1{
+    background: url(../images/card-2.JPG)  no-repeat center center/cover;
+    width: 100%;
+    height:100%;
+}
+.slide-img-2{
+    background: url(../images/card-3.jpg)  no-repeat center center/cover;
+    width: 100%;
+    height:100%;
+}
+.slide-text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+
+}
+
+.slide-text >  p{
+    font-size: 16px;
+    color: orange;
+}
+
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+
+.donate-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.donation-container {
+    background-color: #cce0ff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+h3 {
+    color: #3a4f74;
+    margin-bottom: 10px;
+}
+
+.required {
+    color: red;
+    font-size: 0.8em;
+}
+
+.donation-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Hide the default radio button */
+.donation-input {
+    display: none;
+}
+
+/* Style labels as buttons */
+.donation-label {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #3a4f74;
+    border-radius: 5px;
+    background-color: #e6f0ff;
+    color: #3a4f74;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.donation-label:hover {
+    background-color: #3a4f74;
+    color: #ffffff;
+}
+
+/* Selected state */
+.donation-input:checked + .donation-label {
+    background-color: #3a4f74;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 30px;
+    }
+
+    .donate-container {
+        padding: 10px;
+    }
+
+    .container {
+        width: 95%; /* Adjust width on smaller screens */
+    }
+}
+
+/* Media queries : tables for larger ( 768px and up)*/
+
+@media screen and (min-width:768px){
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Logo image size */
+
+    .logo > img{
+        width: 140px;
+    }
+
+    /* Navbar layout settings */
+
+    .navbar{
+        padding:20px ;
+        border: none;
+    }
+    .btn-nav{
+        display:none;
+    }
+    nav{
+        display:block;
+        position: relative;
+        width: fit-content;
+        background-color: rgba(0,0,0,0);
+        box-shadow: none;
+        padding: 0;
+    }
+    .list{
+        background-color: rgba(0,0,0,0);
+        border: none;
+    }
+
+    #menu{
+        display: flex;
+        align-items: baseline;
+        padding-right: 1rem;
+    }
+    #menu > li {
+        padding-left: 1rem;
+        font-size: 130%;
+        margin-bottom: 4px;
+    }
+    .hidden-menu {
+        display: block;
+    }
+    .hidden-menu > .btn{
+        border-radius: 0;
+
+    }
+    .hidden-menu a{
+        padding: 10px;
+    }
+    .nav-toggler-label{
+        display: none;
+    }   
+    .hero-left{
+        height:40vh;
+    }
+    .hero-text{
+        top:20%;
+        padding: 30px 0;
+    }
+    .slide{
+        width:50%;
+        border: 1px solid white;
+    }
+    .slide-content {
+        flex-direction: row; /* Arrange content side-by-side on larger screens */
+        height: 100%;
+        gap: 10px;
+
+        
+
+    }
+
+    .slide-img , .slide-img-1, .slide-img-2 {
+        width: 50%; /* Adjust width for better alignment on larger screens */
+        height: 100%;
+    }
+    .slide-text{
+        width: 50%;
+        height: 100%;
+        position: relative;
+        gap: 20px;
+        justify-content: flex-end;
+        padding: 30px 20px;
+
+        
+    }
+   
+    .slide-text > h3{
+        font-size: 200%;
+        color: rgb(245, 243, 240);
+    }
+    .slide-text > p{
+        font-size:100%;
+
+    }
+    .slide-text > a{
+        background-color: orange;
+        padding: 8px;
+        width: 40%;
+        margin-top: 40px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+/* Media queries : laptops and larger ( 992px and up)*/
+
+@media screen and (min-width:992px){
+   
+    /* Logo image size */
+
+    .logo > img{
+        width: 190px;
+        padding-left: 20px;
+    }
+  
+    #menu > li:hover{
+        border-bottom: 2px solid orangered;
+        padding-bottom: 4px;
+    }
+    .hidden-menu a{
+        padding: 10px;
+    }
+    .hidden-menu >.btn:hover{
+        background-color: blue;
+    }
+
+    #menu > li:nth-child(4){
+    border-bottom: none;
+
+    }
+   
+    /*hero section*/
+
+    .hero{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .hero-left{
+        position: relative;
+        width: 90%;
+        border: 4px solid rgb(245, 244, 242);
+
+    }
+    .hero-left, .hero-right{
+        height: 80vh;
+        flex:1;
+
+
+    }
+    .hero-text{
+        position: absolute;
+        top: 20%;
+        height:40vh;
+        padding: 20px 30px;
+        gap:20px;
+    
+    }
+    .hero-text h1{
+        font-size:230%;
+        color: beige;
+
+    }
+
+    .hero-text > p{
+        font-size: 140%;
+        margin-bottom: 25px;
+        color: beige;
+    }
+
+    .btn-hero{
+        padding: 13px;
+        margin-top: 40px;
+    }
+   
+    #about-section{
+        height: 40vh;
+    }
+    #slide-section{
+        height: 75vh;
+        border: 4px solid rgb(255, 255, 255);
+
+    }
+    .slide{
+        width: 100%;
+        height: 60vh;
+        background-color:  rgb(38, 111, 221);
+        box-shadow: none;
+        gap: 0;
+    }
+    .slide-content{
+        width: 100%;
+        height: 100%;
+
+    }
+    .slide-img , .slide-img-1 ,.slide-img-2{
+        max-width: 50%;
+        
+    }
+    .slide-text > h3{
+        font-size: 300%;
+        color: rgb(245, 243, 240);
+    }
+    .slide-text > p{
+        font-size:140%;
+
+    }
+    .slide-text > a{
+        padding: 17px;
+        
+    }
+}
+
+
+/*Media queries: laptops and larger ( 992px and up)*/
+
+
+
