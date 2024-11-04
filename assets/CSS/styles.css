@@ -5,8 +5,13 @@
 :root {
     /*primary color*/
     --main-bg-color:  rgba(49, 153, 238, 0.9);
+    --darker-bg-color:rgb(38, 111, 221);
     /*buttons color*/
     --orange-dark:rgba(255, 69, 0,1);
+    /*font color*/
+    --white:rgba(255,255,255,1);
+    /*box-shadow-color*/
+    --box-shadow:rgba(58, 58, 58);
 
 }
 
@@ -55,7 +60,7 @@ header{
 .list{
     text-align: right;
     position: relative;
-    background-color: rgb(38, 111, 221);
+    background-color: var(--darker-bg-color);
     border-bottom: 1px solid var(--orange-dark);
     padding-right: 20px;
 
@@ -68,7 +73,7 @@ nav{
     width: 100%;
     padding:0.5rem 1rem;
     right: 0;
-    box-shadow: 0 2px 2px #3a3a3a;
+    box-shadow: 0 2px 2px var(--box-shadow);
     background-color: rgb(38, 111, 221);
     display: none; /* Initially hidden, shown when toggled */
 }
@@ -140,22 +145,53 @@ nav{
 .btn {
     background-color: rgba(255, 69, 0,1);
     box-shadow: 2px 2px 3px black;
-    
-}
-.btn-nav{
+    }
+
+/* Button link styling */
+
+a , .btn-style {
+    color: white;
+    text-transform: capitalize;
+    font-family: "Manrope", sans-serif;
+    font-weight: bolder;
     padding: 5px;
     font-size: 130%;
 }
 
-/* Button link styling */
+/*Hero Section */
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+}
+.hero-left{
+    background-color: var(--darker-bg-color) ;
+    width: 100%;
+    height:fit-content;
+    position: relative;
+    border: 1px solid var(--darker-bg-color);
+    
+}
+.hero-right{
+    background: url(../images/hero-img.jpg) no-repeat center center/contain;
+    height: 60vh ;
+    min-width: 100%;
 
-.btn-nav a, .btn-hero {
-    padding: 5px;
-    font-size: 100%;
-    text-transform: capitalize;
-    font-family: "Manrope", sans-serif;
-    font-weight: bolder;
-
+}
+.hero-text{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 20px 25px;
+    
+}
+.hero-text h1 , p {
+    font-family: 'Lato', sans-serif;
+    
 }
 /* Media queries : tables for larger ( 768px and up)*/
 
