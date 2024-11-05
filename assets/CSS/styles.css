@@ -175,9 +175,10 @@ a , .btn-style {
     
 }
 .hero-right{
-    background: url(../images/hero-img.jpg) no-repeat center center/contain;
+    background: url(../images/bg-image.JPG) no-repeat center center/cover;
     height: 60vh ;
     width: 100%;
+    background-color: var(--darker-bg-color);
 
 }
 .container-text{
