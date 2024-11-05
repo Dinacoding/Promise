@@ -48,7 +48,6 @@ header{
 .navbar{
     display: flex;
     justify-content: space-between;
-    align-items:cente;
     padding: 20px;
     border-bottom: 1px solid var(--orange-dark);
 }
@@ -245,6 +244,28 @@ a , .btn-style {
     color: var(--white);
     font-size: 130%;
 }
+details>summary {
+    list-style-type: none;
+    outline: none;
+    cursor: pointer;
+    
+  }
+  
+  details>summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  details>summary::before {
+    content: '+ ';
+  }
+  
+  details[open]>summary::before {
+    content: '- ';
+  }
+  
+  details[open]>summary {
+    margin-bottom: 0.5rem;
+  }
 /* Media queries : tables for larger ( 768px and up)*/
 
 @media screen and (min-width:768px){
@@ -339,7 +360,7 @@ a , .btn-style {
 
    .content{
     flex-direction: row;
-    padding: 40px 30px;
+    padding: 30px;
     align-items: end;    
     }
    .content h2{
@@ -431,11 +452,15 @@ a , .btn-style {
     .content h2{
         right: 20%;
         left: auto;
-        font-size: 300%;
-        top:30%;
+        font-size: 350%;
+        z-index: -99;
+        top: 15%;
+
+    
     }
     .orange-block{
         left: -30px;
+        z-index: -1;
     }
     .paragraph{
         padding-right: 0;
