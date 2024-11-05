@@ -216,6 +216,7 @@ a , .btn-style {
     justify-content: center;
     padding: 0 30px;
     position: relative;
+    color: var(--orange-dark);
 }
 .image-container {
     position: relative;
@@ -241,6 +242,8 @@ a , .btn-style {
 .paragraph{
     background-color: var(--darker-bg-color);
     padding: 20px;
+    color: var(--white);
+    font-size: 130%;
 }
 /* Media queries : tables for larger ( 768px and up)*/
 
@@ -336,13 +339,25 @@ a , .btn-style {
 
    .content{
     flex-direction: row;
-
+    padding: 40px 30px;
+    align-items: end;    
+    }
+   .content h2{
+    position: absolute;
+    top:5%;
+    left:4%;
    }
    .image-container{
     flex: 1;
+    
    }
+
    .paragraph{
     flex: 1;
+   }
+
+   .orange-block{
+    bottom: -30px;
    }
 }
 
