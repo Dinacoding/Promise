@@ -426,4 +426,18 @@ a , .btn-style {
         margin-bottom: 25px;
         color: beige;
     }
+
+       /* About section responsive */
+    .content h2{
+        right: 20%;
+        left: auto;
+        font-size: 300%;
+        top:30%;
+    }
+    .orange-block{
+        left: -30px;
+    }
+    .paragraph{
+        padding-right: 0;
+    }
 }
